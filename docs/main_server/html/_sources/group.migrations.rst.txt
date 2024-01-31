@@ -1,0 +1,29 @@
+group.migrations package
+========================
+
+Submodules
+----------
+
+group.migrations.0001\_initial module
+-------------------------------------
+
+.. automodule:: group.migrations.0001_initial
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+group.migrations.0002\_initial module
+-------------------------------------
+
+.. automodule:: group.migrations.0002_initial
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: group.migrations
+   :members:
+   :undoc-members:
+   :show-inheritance:

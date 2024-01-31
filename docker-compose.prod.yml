@@ -1,0 +1,187 @@
+version: '3.9'
+
+services:
+  main_server:
+    build: 
+        context: ./main_server
+        dockerfile: Dockerfile
+    # command: gunicorn groups_backend.wsgi:application --bind 0.0.0.0:8000
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - './main_server/:/main_server/'
+    env_file:
+      - ./.env.dev
+    depends_on:
+      - postgres_db_africa
+      - postgres_db_china
+      - postgres_db_eu
+      - postgres_db_ind
+      - postgres_db_main
+      - postgres_db_us
+  
+  sub_server_ind:
+    build: 
+        context: ./sec_server
+        dockerfile: Dockerfile
+    # command: gunicorn groups_backend.wsgi:application --bind 0.0.0.0:8000
+    command: python manage.py runserver 0.0.0.0:8060
+    volumes:
+      - './sec_server/:/sec_server/'
+    env_file:
+      - ./.env_ind.dev
+    depends_on:
+      - postgres_db_ind
+      - postgres_db_main
+    ports:
+      - 8060:8060
+
+  sub_server_us:
+    build: 
+        context: ./sec_server
+        dockerfile: Dockerfile
+    # command: gunicorn groups_backend.wsgi:application --bind 0.0.0.0:8000
+    command: python manage.py runserver 0.0.0.0:8070
+    volumes:
+      - './sec_server/:/sec_server/'
+    env_file:
+      - ./.env_us.dev
+    depends_on:
+      - postgres_db_us
+      - postgres_db_main
+    ports:
+      - 8070:8070
+
+  
+  sub_server_eu:
+    build: 
+        context: ./sec_server
+        dockerfile: Dockerfile
+    # command: gunicorn groups_backend.wsgi:application --bind 0.0.0.0:8000
+    command: python manage.py runserver 0.0.0.0:8080
+    volumes:
+      - './sec_server/:/sec_server/'
+    env_file:
+      - ./.env_eu.dev
+    depends_on:
+      - postgres_db_eu
+      - postgres_db_main
+    ports:
+      - 8080:8080
+  
+  sub_server_africa:
+    build: 
+        context: ./sec_server
+        dockerfile: Dockerfile
+    # command: gunicorn groups_backend.wsgi:application --bind 0.0.0.0:8000
+    command: python manage.py runserver 0.0.0.0:8090
+    volumes:
+      - './sec_server/:/sec_server/'
+    env_file:
+      - ./.env_africa.dev
+    depends_on:
+      - postgres_db_africa
+      - postgres_db_main
+    ports:
+      - 8090:8090
+
+  sub_server_china:
+    build: 
+        context: ./sec_server
+        dockerfile: Dockerfile
+    # command: gunicorn groups_backend.wsgi:application --bind 0.0.0.0:8000
+    command: python manage.py runserver 0.0.0.0:8100
+    volumes:
+      - './sec_server/:/sec_server/'
+    env_file:
+      - ./.env_china.dev
+    depends_on:
+      - postgres_db_china
+      - postgres_db_main
+    ports:
+      - 8100:8100
+  
+  
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile
+    ports:
+      - 8000:80
+    depends_on:
+      - main_server
+    volumes:
+      - './main_server/media/:/media/'
+
+#   postgres_db:
+#     image: postgres:12.0-alpine
+#     volumes:
+#         - postgres_data:/var/lib/postgresql/data/
+#     env_file:
+#         - ./.env.dev
+# volumes:
+#     postgres_data:
+  
+
+  postgres_db_main:
+      image: postgres:12.0-alpine
+      volumes:
+          - postgres_data_1:/var/lib/postgresql/data/
+      env_file:
+          - ./.env.dev
+      ports:
+          - "5432:5432"
+
+  postgres_db_ind:
+      image: postgres:12.0-alpine
+      volumes:
+          - postgres_data_2:/var/lib/postgresql/data/
+      env_file:
+          - ./.env_ind.dev
+      ports:
+          - "5433:5432"
+      
+  postgres_db_us:
+      image: postgres:12.0-alpine
+      volumes:
+          - postgres_data_3:/var/lib/postgresql/data/
+      env_file:
+          - ./.env_us.dev
+      ports:
+          - "5434:5432"
+
+  postgres_db_eu:
+      image: postgres:12.0-alpine
+      volumes:
+          - postgres_data_4:/var/lib/postgresql/data/
+      env_file:
+          - ./.env_eu.dev
+      ports:
+          - "5435:5432"
+  
+  postgres_db_africa:
+      image: postgres:12.0-alpine
+      volumes:
+          - postgres_data_5:/var/lib/postgresql/data/
+      env_file:
+          - ./.env_africa.dev
+      ports:
+          - "5436:5432"
+  
+
+  postgres_db_china:
+      image: postgres:12.0-alpine
+      volumes:
+          - postgres_data_6:/var/lib/postgresql/data/
+      env_file:
+          - ./.env_china.dev
+      ports:
+          - "5437:5432"
+
+
+volumes:
+    postgres_data_1:
+    postgres_data_2:
+    postgres_data_3:
+    postgres_data_4:
+    postgres_data_5:
+    postgres_data_6:

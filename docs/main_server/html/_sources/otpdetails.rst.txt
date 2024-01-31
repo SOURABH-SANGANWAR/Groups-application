@@ -1,0 +1,69 @@
+otpdetails package
+==================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   otpdetails.migrations
+
+Submodules
+----------
+
+otpdetails.admin module
+-----------------------
+
+.. automodule:: otpdetails.admin
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+otpdetails.apps module
+----------------------
+
+.. automodule:: otpdetails.apps
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+otpdetails.models module
+------------------------
+
+.. automodule:: otpdetails.models
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+otpdetails.tests module
+-----------------------
+
+.. automodule:: otpdetails.tests
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+otpdetails.urls module
+----------------------
+
+.. automodule:: otpdetails.urls
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+otpdetails.views module
+-----------------------
+
+.. automodule:: otpdetails.views
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: otpdetails
+   :members:
+   :undoc-members:
+   :show-inheritance:

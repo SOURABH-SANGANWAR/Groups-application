@@ -1,0 +1,593 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
+    <title>sec_server &#8212; Groups Backend Main Server 1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="sec-server">
+<h1>sec_server<a class="headerlink" href="#sec-server" title="Permalink to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="group.html">group package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="group.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="group.migrations.html">group.migrations package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="group.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.migrations.html#module-group.migrations.0001_initial">group.migrations.0001_initial module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.migrations.html#module-group.migrations.0002_initial">group.migrations.0002_initial module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.migrations.html#module-group.migrations.0003_alter_group_db_region">group.migrations.0003_alter_group_db_region module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.migrations.html#module-group.migrations">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="group.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="group.html#module-group.apps">group.apps module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="group.html#group.apps.GroupConfig"><code class="docutils literal notranslate"><span class="pre">GroupConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.apps.GroupConfig.default_auto_field"><code class="docutils literal notranslate"><span class="pre">GroupConfig.default_auto_field</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.apps.GroupConfig.name"><code class="docutils literal notranslate"><span class="pre">GroupConfig.name</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="group.html#module-group.models">group.models module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="group.html#group.models.ActiveManager"><code class="docutils literal notranslate"><span class="pre">ActiveManager</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.ActiveManager.get_queryset"><code class="docutils literal notranslate"><span class="pre">ActiveManager.get_queryset()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group.html#group.models.DeletedManager"><code class="docutils literal notranslate"><span class="pre">DeletedManager</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.DeletedManager.get_queryset"><code class="docutils literal notranslate"><span class="pre">DeletedManager.get_queryset()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group.html#group.models.Group"><code class="docutils literal notranslate"><span class="pre">Group</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.Group.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Group.DoesNotExist</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.Group.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Group.MultipleObjectsReturned</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.Group.created_at"><code class="docutils literal notranslate"><span class="pre">Group.created_at</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.Group.created_by"><code class="docutils literal notranslate"><span class="pre">Group.created_by</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.Group.created_by_id"><code class="docutils literal notranslate"><span class="pre">Group.created_by_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.Group.db_region"><code class="docutils literal notranslate"><span class="pre">Group.db_region</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.Group.deleted_at"><code class="docutils literal notranslate"><span class="pre">Group.deleted_at</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.Group.deleted_by"><code class="docutils literal notranslate"><span class="pre">Group.deleted_by</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.Group.deleted_by_id"><code class="docutils literal notranslate"><span class="pre">Group.deleted_by_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.Group.deleted_objects"><code class="docutils literal notranslate"><span class="pre">Group.deleted_objects</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.Group.description"><code class="docutils literal notranslate"><span class="pre">Group.description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.Group.email"><code class="docutils literal notranslate"><span class="pre">Group.email</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.Group.email_password"><code class="docutils literal notranslate"><span class="pre">Group.email_password</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.Group.get_db_region_display"><code class="docutils literal notranslate"><span class="pre">Group.get_db_region_display()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.Group.get_next_by_created_at"><code class="docutils literal notranslate"><span class="pre">Group.get_next_by_created_at()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.Group.get_previous_by_created_at"><code class="docutils literal notranslate"><span class="pre">Group.get_previous_by_created_at()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.Group.group_members"><code class="docutils literal notranslate"><span class="pre">Group.group_members</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.Group.id"><code class="docutils literal notranslate"><span class="pre">Group.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.Group.is_deleted"><code class="docutils literal notranslate"><span class="pre">Group.is_deleted</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.Group.is_email_validated"><code class="docutils literal notranslate"><span class="pre">Group.is_email_validated</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.Group.is_public_join"><code class="docutils literal notranslate"><span class="pre">Group.is_public_join</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.Group.is_public_view"><code class="docutils literal notranslate"><span class="pre">Group.is_public_view</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.Group.message_threads"><code class="docutils literal notranslate"><span class="pre">Group.message_threads</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.Group.name"><code class="docutils literal notranslate"><span class="pre">Group.name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.Group.objects"><code class="docutils literal notranslate"><span class="pre">Group.objects</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.Group.profile_image"><code class="docutils literal notranslate"><span class="pre">Group.profile_image</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.Group.role_permissions"><code class="docutils literal notranslate"><span class="pre">Group.role_permissions</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.Group.updated_at"><code class="docutils literal notranslate"><span class="pre">Group.updated_at</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.Group.updated_by"><code class="docutils literal notranslate"><span class="pre">Group.updated_by</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="group.html#group.models.Group.updated_by_id"><code class="docutils literal notranslate"><span class="pre">Group.updated_by_id</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="group.html#group.models.get_groups_image_name"><code class="docutils literal notranslate"><span class="pre">get_groups_image_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="group.html#module-group">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="groups_backend.html">groups_backend package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="groups_backend.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="groups_backend.html#module-groups_backend.asgi">groups_backend.asgi module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="groups_backend.html#module-groups_backend.settings">groups_backend.settings module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="groups_backend.html#module-groups_backend.urls">groups_backend.urls module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="groups_backend.html#module-groups_backend.wsgi">groups_backend.wsgi module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="groups_backend.html#module-groups_backend">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="manage.html">manage module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="manage.html#manage.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="member.html">member package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="member.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="member.migrations.html">member.migrations package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="member.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="member.migrations.html#module-member.migrations.0001_initial">member.migrations.0001_initial module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="member.migrations.html#module-member.migrations.0002_initial">member.migrations.0002_initial module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="member.migrations.html#module-member.migrations.0003_alter_groupmember_user">member.migrations.0003_alter_groupmember_user module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="member.migrations.html#module-member.migrations">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="member.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="member.html#module-member.apps">member.apps module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="member.html#member.apps.MemberConfig"><code class="docutils literal notranslate"><span class="pre">MemberConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="member.html#member.apps.MemberConfig.default_auto_field"><code class="docutils literal notranslate"><span class="pre">MemberConfig.default_auto_field</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="member.html#member.apps.MemberConfig.name"><code class="docutils literal notranslate"><span class="pre">MemberConfig.name</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="member.html#module-member.models">member.models module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="member.html#member.models.GroupMember"><code class="docutils literal notranslate"><span class="pre">GroupMember</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="member.html#member.models.GroupMember.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">GroupMember.DoesNotExist</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="member.html#member.models.GroupMember.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">GroupMember.MultipleObjectsReturned</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="member.html#member.models.GroupMember.email_id"><code class="docutils literal notranslate"><span class="pre">GroupMember.email_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="member.html#member.models.GroupMember.group"><code class="docutils literal notranslate"><span class="pre">GroupMember.group</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="member.html#member.models.GroupMember.group_id"><code class="docutils literal notranslate"><span class="pre">GroupMember.group_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="member.html#member.models.GroupMember.id"><code class="docutils literal notranslate"><span class="pre">GroupMember.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="member.html#member.models.GroupMember.is_banned"><code class="docutils literal notranslate"><span class="pre">GroupMember.is_banned</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="member.html#member.models.GroupMember.is_invited"><code class="docutils literal notranslate"><span class="pre">GroupMember.is_invited</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="member.html#member.models.GroupMember.is_pending"><code class="docutils literal notranslate"><span class="pre">GroupMember.is_pending</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="member.html#member.models.GroupMember.objects"><code class="docutils literal notranslate"><span class="pre">GroupMember.objects</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="member.html#member.models.GroupMember.profile_picture"><code class="docutils literal notranslate"><span class="pre">GroupMember.profile_picture</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="member.html#member.models.GroupMember.role"><code class="docutils literal notranslate"><span class="pre">GroupMember.role</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="member.html#member.models.GroupMember.role_id"><code class="docutils literal notranslate"><span class="pre">GroupMember.role_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="member.html#member.models.GroupMember.user"><code class="docutils literal notranslate"><span class="pre">GroupMember.user</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="member.html#member.models.GroupMember.user_id"><code class="docutils literal notranslate"><span class="pre">GroupMember.user_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="member.html#member.models.GroupMember.username"><code class="docutils literal notranslate"><span class="pre">GroupMember.username</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="member.html#module-member">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="message.html">message package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="message.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="message.migrations.html">message.migrations package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="message.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.migrations.html#module-message.migrations.0001_initial">message.migrations.0001_initial module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.migrations.html#module-message.migrations.0002_auto_20230504_1433">message.migrations.0002_auto_20230504_1433 module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.migrations.html#module-message.migrations">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="message.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="message.html#module-message.admin">message.admin module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="message.html#module-message.apps">message.apps module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="message.html#message.apps.MessageConfig"><code class="docutils literal notranslate"><span class="pre">MessageConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.apps.MessageConfig.default_auto_field"><code class="docutils literal notranslate"><span class="pre">MessageConfig.default_auto_field</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.apps.MessageConfig.name"><code class="docutils literal notranslate"><span class="pre">MessageConfig.name</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="message.html#module-message.models">message.models module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="message.html#message.models.Message"><code class="docutils literal notranslate"><span class="pre">Message</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.models.Message.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">Message.DoesNotExist</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.models.Message.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">Message.MultipleObjectsReturned</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.models.Message.attachments"><code class="docutils literal notranslate"><span class="pre">Message.attachments</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.models.Message.children"><code class="docutils literal notranslate"><span class="pre">Message.children</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.models.Message.create_attachments"><code class="docutils literal notranslate"><span class="pre">Message.create_attachments()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.models.Message.get_attachments"><code class="docutils literal notranslate"><span class="pre">Message.get_attachments()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.models.Message.get_next_by_sent_at"><code class="docutils literal notranslate"><span class="pre">Message.get_next_by_sent_at()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.models.Message.get_previous_by_sent_at"><code class="docutils literal notranslate"><span class="pre">Message.get_previous_by_sent_at()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.models.Message.id"><code class="docutils literal notranslate"><span class="pre">Message.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.models.Message.message"><code class="docutils literal notranslate"><span class="pre">Message.message</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.models.Message.objects"><code class="docutils literal notranslate"><span class="pre">Message.objects</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.models.Message.parent"><code class="docutils literal notranslate"><span class="pre">Message.parent</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.models.Message.parent_id"><code class="docutils literal notranslate"><span class="pre">Message.parent_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.models.Message.recieved_by"><code class="docutils literal notranslate"><span class="pre">Message.recieved_by</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.models.Message.recieved_by_id"><code class="docutils literal notranslate"><span class="pre">Message.recieved_by_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.models.Message.sent_at"><code class="docutils literal notranslate"><span class="pre">Message.sent_at</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.models.Message.sent_by"><code class="docutils literal notranslate"><span class="pre">Message.sent_by</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.models.Message.sent_by_id"><code class="docutils literal notranslate"><span class="pre">Message.sent_by_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.models.Message.thread"><code class="docutils literal notranslate"><span class="pre">Message.thread</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.models.Message.thread_id"><code class="docutils literal notranslate"><span class="pre">Message.thread_id</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="message.html#message.models.MessageAttachment"><code class="docutils literal notranslate"><span class="pre">MessageAttachment</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.models.MessageAttachment.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">MessageAttachment.DoesNotExist</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.models.MessageAttachment.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">MessageAttachment.MultipleObjectsReturned</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.models.MessageAttachment.file"><code class="docutils literal notranslate"><span class="pre">MessageAttachment.file</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.models.MessageAttachment.get_file_name"><code class="docutils literal notranslate"><span class="pre">MessageAttachment.get_file_name()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.models.MessageAttachment.id"><code class="docutils literal notranslate"><span class="pre">MessageAttachment.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.models.MessageAttachment.message"><code class="docutils literal notranslate"><span class="pre">MessageAttachment.message</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.models.MessageAttachment.message_id"><code class="docutils literal notranslate"><span class="pre">MessageAttachment.message_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.models.MessageAttachment.objects"><code class="docutils literal notranslate"><span class="pre">MessageAttachment.objects</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="message.html#message.models.get_upload_path"><code class="docutils literal notranslate"><span class="pre">get_upload_path()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="message.html#module-message.permissions">message.permissions module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="message.html#message.permissions.can_get_message"><code class="docutils literal notranslate"><span class="pre">can_get_message()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="message.html#module-message.serializers">message.serializers module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="message.html#message.serializers.MessageAttachmentSerializer"><code class="docutils literal notranslate"><span class="pre">MessageAttachmentSerializer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.serializers.MessageAttachmentSerializer.Meta"><code class="docutils literal notranslate"><span class="pre">MessageAttachmentSerializer.Meta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.serializers.MessageAttachmentSerializer.get_file_name"><code class="docutils literal notranslate"><span class="pre">MessageAttachmentSerializer.get_file_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="message.html#message.serializers.MessageSerializer"><code class="docutils literal notranslate"><span class="pre">MessageSerializer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.serializers.MessageSerializer.Meta"><code class="docutils literal notranslate"><span class="pre">MessageSerializer.Meta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.serializers.MessageSerializer.create"><code class="docutils literal notranslate"><span class="pre">MessageSerializer.create()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="message.html#module-message.services">message.services module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="message.html#message.services.MessageService"><code class="docutils literal notranslate"><span class="pre">MessageService</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.services.MessageService.create_message"><code class="docutils literal notranslate"><span class="pre">MessageService.create_message()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.services.MessageService.create_message_request"><code class="docutils literal notranslate"><span class="pre">MessageService.create_message_request()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.services.MessageService.get_message"><code class="docutils literal notranslate"><span class="pre">MessageService.get_message()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="message.html#module-message.tests">message.tests module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="message.html#message.tests.Tests"><code class="docutils literal notranslate"><span class="pre">Tests</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.tests.Tests.setUp"><code class="docutils literal notranslate"><span class="pre">Tests.setUp()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.tests.Tests.test_get_message"><code class="docutils literal notranslate"><span class="pre">Tests.test_get_message()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.tests.Tests.test_perm"><code class="docutils literal notranslate"><span class="pre">Tests.test_perm()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.tests.Tests.test_reply_all"><code class="docutils literal notranslate"><span class="pre">Tests.test_reply_all()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.tests.Tests.test_reply_author"><code class="docutils literal notranslate"><span class="pre">Tests.test_reply_author()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="message.html#module-message.urls">message.urls module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="message.html#module-message.views">message.views module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="message.html#message.views.GetAttachment"><code class="docutils literal notranslate"><span class="pre">GetAttachment</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.views.GetAttachment.get"><code class="docutils literal notranslate"><span class="pre">GetAttachment.get()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="message.html#message.views.messageView"><code class="docutils literal notranslate"><span class="pre">messageView</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.views.messageView.get"><code class="docutils literal notranslate"><span class="pre">messageView.get()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.views.messageView.post"><code class="docutils literal notranslate"><span class="pre">messageView.post()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="message.html#message.views.messageView.put"><code class="docutils literal notranslate"><span class="pre">messageView.put()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="message.html#module-message">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="migration_cleaner.html">migration_cleaner module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="permissions.html">permissions package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="permissions.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="permissions.migrations.html">permissions.migrations package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="permissions.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="permissions.migrations.html#module-permissions.migrations.0001_initial">permissions.migrations.0001_initial module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="permissions.migrations.html#module-permissions.migrations">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="permissions.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="permissions.html#module-permissions.apps">permissions.apps module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="permissions.html#permissions.apps.PermissionsConfig"><code class="docutils literal notranslate"><span class="pre">PermissionsConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="permissions.html#permissions.apps.PermissionsConfig.default_auto_field"><code class="docutils literal notranslate"><span class="pre">PermissionsConfig.default_auto_field</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="permissions.html#permissions.apps.PermissionsConfig.name"><code class="docutils literal notranslate"><span class="pre">PermissionsConfig.name</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="permissions.html#module-permissions.models">permissions.models module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="permissions.html#permissions.models.RolePermission"><code class="docutils literal notranslate"><span class="pre">RolePermission</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="permissions.html#permissions.models.RolePermission.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">RolePermission.DoesNotExist</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="permissions.html#permissions.models.RolePermission.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">RolePermission.MultipleObjectsReturned</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="permissions.html#permissions.models.RolePermission.attach_files"><code class="docutils literal notranslate"><span class="pre">RolePermission.attach_files</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="permissions.html#permissions.models.RolePermission.can_post"><code class="docutils literal notranslate"><span class="pre">RolePermission.can_post</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="permissions.html#permissions.models.RolePermission.group"><code class="docutils literal notranslate"><span class="pre">RolePermission.group</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="permissions.html#permissions.models.RolePermission.group_id"><code class="docutils literal notranslate"><span class="pre">RolePermission.group_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="permissions.html#permissions.models.RolePermission.group_members"><code class="docutils literal notranslate"><span class="pre">RolePermission.group_members</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="permissions.html#permissions.models.RolePermission.id"><code class="docutils literal notranslate"><span class="pre">RolePermission.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="permissions.html#permissions.models.RolePermission.is_default"><code class="docutils literal notranslate"><span class="pre">RolePermission.is_default</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="permissions.html#permissions.models.RolePermission.manage_content"><code class="docutils literal notranslate"><span class="pre">RolePermission.manage_content</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="permissions.html#permissions.models.RolePermission.manage_members"><code class="docutils literal notranslate"><span class="pre">RolePermission.manage_members</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="permissions.html#permissions.models.RolePermission.manage_metadata"><code class="docutils literal notranslate"><span class="pre">RolePermission.manage_metadata</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="permissions.html#permissions.models.RolePermission.manage_roles"><code class="docutils literal notranslate"><span class="pre">RolePermission.manage_roles</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="permissions.html#permissions.models.RolePermission.objects"><code class="docutils literal notranslate"><span class="pre">RolePermission.objects</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="permissions.html#permissions.models.RolePermission.post_as_group"><code class="docutils literal notranslate"><span class="pre">RolePermission.post_as_group</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="permissions.html#permissions.models.RolePermission.reply_to_authors"><code class="docutils literal notranslate"><span class="pre">RolePermission.reply_to_authors</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="permissions.html#permissions.models.RolePermission.role_description"><code class="docutils literal notranslate"><span class="pre">RolePermission.role_description</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="permissions.html#permissions.models.RolePermission.role_name"><code class="docutils literal notranslate"><span class="pre">RolePermission.role_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="permissions.html#permissions.models.RolePermission.view_member_email_addresses"><code class="docutils literal notranslate"><span class="pre">RolePermission.view_member_email_addresses</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="permissions.html#module-permissions">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="thread.html">thread package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="thread.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="thread.migrations.html">thread.migrations package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="thread.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.migrations.html#module-thread.migrations.0001_initial">thread.migrations.0001_initial module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.migrations.html#module-thread.migrations">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="thread.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="thread.html#module-thread.admin">thread.admin module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="thread.html#module-thread.apps">thread.apps module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="thread.html#thread.apps.ThreadConfig"><code class="docutils literal notranslate"><span class="pre">ThreadConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.apps.ThreadConfig.default_auto_field"><code class="docutils literal notranslate"><span class="pre">ThreadConfig.default_auto_field</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.apps.ThreadConfig.name"><code class="docutils literal notranslate"><span class="pre">ThreadConfig.name</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="thread.html#module-thread.models">thread.models module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="thread.html#thread.models.MessageThread"><code class="docutils literal notranslate"><span class="pre">MessageThread</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.models.MessageThread.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">MessageThread.DoesNotExist</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.models.MessageThread.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">MessageThread.MultipleObjectsReturned</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.models.MessageThread.created_at"><code class="docutils literal notranslate"><span class="pre">MessageThread.created_at</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.models.MessageThread.created_by"><code class="docutils literal notranslate"><span class="pre">MessageThread.created_by</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.models.MessageThread.created_by_id"><code class="docutils literal notranslate"><span class="pre">MessageThread.created_by_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.models.MessageThread.get_next_by_created_at"><code class="docutils literal notranslate"><span class="pre">MessageThread.get_next_by_created_at()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.models.MessageThread.get_next_by_updated_at"><code class="docutils literal notranslate"><span class="pre">MessageThread.get_next_by_updated_at()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.models.MessageThread.get_previous_by_created_at"><code class="docutils literal notranslate"><span class="pre">MessageThread.get_previous_by_created_at()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.models.MessageThread.get_previous_by_updated_at"><code class="docutils literal notranslate"><span class="pre">MessageThread.get_previous_by_updated_at()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.models.MessageThread.group"><code class="docutils literal notranslate"><span class="pre">MessageThread.group</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.models.MessageThread.group_id"><code class="docutils literal notranslate"><span class="pre">MessageThread.group_id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.models.MessageThread.id"><code class="docutils literal notranslate"><span class="pre">MessageThread.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.models.MessageThread.message_set"><code class="docutils literal notranslate"><span class="pre">MessageThread.message_set</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.models.MessageThread.objects"><code class="docutils literal notranslate"><span class="pre">MessageThread.objects</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.models.MessageThread.subject"><code class="docutils literal notranslate"><span class="pre">MessageThread.subject</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.models.MessageThread.updated_at"><code class="docutils literal notranslate"><span class="pre">MessageThread.updated_at</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.models.MessageThread.updated_by"><code class="docutils literal notranslate"><span class="pre">MessageThread.updated_by</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.models.MessageThread.updated_by_id"><code class="docutils literal notranslate"><span class="pre">MessageThread.updated_by_id</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="thread.html#module-thread.permissions">thread.permissions module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="thread.html#thread.permissions.can_view_grp_messages"><code class="docutils literal notranslate"><span class="pre">can_view_grp_messages()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="thread.html#thread.permissions.can_view_thread"><code class="docutils literal notranslate"><span class="pre">can_view_thread()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="thread.html#module-thread.serializers">thread.serializers module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="thread.html#thread.serializers.MessageThreadSerializer"><code class="docutils literal notranslate"><span class="pre">MessageThreadSerializer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.serializers.MessageThreadSerializer.Meta"><code class="docutils literal notranslate"><span class="pre">MessageThreadSerializer.Meta</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.serializers.MessageThreadSerializer.get_messages"><code class="docutils literal notranslate"><span class="pre">MessageThreadSerializer.get_messages()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="thread.html#thread.serializers.ThreadSerializer"><code class="docutils literal notranslate"><span class="pre">ThreadSerializer</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.serializers.ThreadSerializer.Meta"><code class="docutils literal notranslate"><span class="pre">ThreadSerializer.Meta</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="thread.html#module-thread.services">thread.services module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="thread.html#thread.services.ThreadService"><code class="docutils literal notranslate"><span class="pre">ThreadService</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.services.ThreadService.create_thread"><code class="docutils literal notranslate"><span class="pre">ThreadService.create_thread()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.services.ThreadService.get_thread"><code class="docutils literal notranslate"><span class="pre">ThreadService.get_thread()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.services.ThreadService.get_threads"><code class="docutils literal notranslate"><span class="pre">ThreadService.get_threads()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="thread.html#module-thread.tests">thread.tests module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="thread.html#thread.tests.Tests"><code class="docutils literal notranslate"><span class="pre">Tests</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.tests.Tests.setUp"><code class="docutils literal notranslate"><span class="pre">Tests.setUp()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.tests.Tests.test_can_view_grp_messages"><code class="docutils literal notranslate"><span class="pre">Tests.test_can_view_grp_messages()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.tests.Tests.test_create_user"><code class="docutils literal notranslate"><span class="pre">Tests.test_create_user()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.tests.Tests.test_permission_can_view_thread"><code class="docutils literal notranslate"><span class="pre">Tests.test_permission_can_view_thread()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.tests.Tests.test_tread"><code class="docutils literal notranslate"><span class="pre">Tests.test_tread()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.tests.Tests.test_view_thread"><code class="docutils literal notranslate"><span class="pre">Tests.test_view_thread()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.tests.Tests.test_view_threads"><code class="docutils literal notranslate"><span class="pre">Tests.test_view_threads()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="thread.html#module-thread.urls">thread.urls module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="thread.html#module-thread.views">thread.views module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="thread.html#thread.views.ThreadDetailView"><code class="docutils literal notranslate"><span class="pre">ThreadDetailView</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.views.ThreadDetailView.authentication_classes"><code class="docutils literal notranslate"><span class="pre">ThreadDetailView.authentication_classes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.views.ThreadDetailView.get"><code class="docutils literal notranslate"><span class="pre">ThreadDetailView.get()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.views.ThreadDetailView.permission_classes"><code class="docutils literal notranslate"><span class="pre">ThreadDetailView.permission_classes</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="thread.html#thread.views.ThreadView"><code class="docutils literal notranslate"><span class="pre">ThreadView</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.views.ThreadView.authentication_classes"><code class="docutils literal notranslate"><span class="pre">ThreadView.authentication_classes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.views.ThreadView.filterset_class"><code class="docutils literal notranslate"><span class="pre">ThreadView.filterset_class</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.views.ThreadView.get"><code class="docutils literal notranslate"><span class="pre">ThreadView.get()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.views.ThreadView.get_queryset"><code class="docutils literal notranslate"><span class="pre">ThreadView.get_queryset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.views.ThreadView.get_serializer_context"><code class="docutils literal notranslate"><span class="pre">ThreadView.get_serializer_context()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.views.ThreadView.pagination_class"><code class="docutils literal notranslate"><span class="pre">ThreadView.pagination_class</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.views.ThreadView.permission_classes"><code class="docutils literal notranslate"><span class="pre">ThreadView.permission_classes</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.views.ThreadView.post"><code class="docutils literal notranslate"><span class="pre">ThreadView.post()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.views.ThreadView.search_fields"><code class="docutils literal notranslate"><span class="pre">ThreadView.search_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="thread.html#thread.views.ThreadView.serializer_class"><code class="docutils literal notranslate"><span class="pre">ThreadView.serializer_class</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="thread.html#module-thread">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usercustom.html">usercustom package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usercustom.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usercustom.migrations.html">usercustom.migrations package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.migrations.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.migrations.html#module-usercustom.migrations.0001_initial">usercustom.migrations.0001_initial module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.migrations.html#module-usercustom.migrations">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usercustom.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usercustom.html#module-usercustom.admin">usercustom.admin module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usercustom.html#usercustom.admin.MyAdmin"><code class="docutils literal notranslate"><span class="pre">MyAdmin</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.admin.MyAdmin.add_fieldsets"><code class="docutils literal notranslate"><span class="pre">MyAdmin.add_fieldsets</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.admin.MyAdmin.fieldsets"><code class="docutils literal notranslate"><span class="pre">MyAdmin.fieldsets</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.admin.MyAdmin.filter_horizontal"><code class="docutils literal notranslate"><span class="pre">MyAdmin.filter_horizontal</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.admin.MyAdmin.list_display"><code class="docutils literal notranslate"><span class="pre">MyAdmin.list_display</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.admin.MyAdmin.list_filter"><code class="docutils literal notranslate"><span class="pre">MyAdmin.list_filter</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.admin.MyAdmin.media"><code class="docutils literal notranslate"><span class="pre">MyAdmin.media</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.admin.MyAdmin.readonly_fields"><code class="docutils literal notranslate"><span class="pre">MyAdmin.readonly_fields</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.admin.MyAdmin.search_fields"><code class="docutils literal notranslate"><span class="pre">MyAdmin.search_fields</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usercustom.html#module-usercustom.apps">usercustom.apps module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usercustom.html#usercustom.apps.UsercustomConfig"><code class="docutils literal notranslate"><span class="pre">UsercustomConfig</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.apps.UsercustomConfig.default_auto_field"><code class="docutils literal notranslate"><span class="pre">UsercustomConfig.default_auto_field</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.apps.UsercustomConfig.name"><code class="docutils literal notranslate"><span class="pre">UsercustomConfig.name</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usercustom.html#module-usercustom.manager">usercustom.manager module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usercustom.html#usercustom.manager.UserManager"><code class="docutils literal notranslate"><span class="pre">UserManager</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.manager.UserManager.create_superuser"><code class="docutils literal notranslate"><span class="pre">UserManager.create_superuser()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.manager.UserManager.create_user"><code class="docutils literal notranslate"><span class="pre">UserManager.create_user()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.manager.UserManager.use_in_migrations"><code class="docutils literal notranslate"><span class="pre">UserManager.use_in_migrations</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="usercustom.html#usercustom.manager.UserManagerfiltered"><code class="docutils literal notranslate"><span class="pre">UserManagerfiltered</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.manager.UserManagerfiltered.create_superuser"><code class="docutils literal notranslate"><span class="pre">UserManagerfiltered.create_superuser()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.manager.UserManagerfiltered.create_user"><code class="docutils literal notranslate"><span class="pre">UserManagerfiltered.create_user()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.manager.UserManagerfiltered.get_queryset"><code class="docutils literal notranslate"><span class="pre">UserManagerfiltered.get_queryset()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.manager.UserManagerfiltered.use_in_migrations"><code class="docutils literal notranslate"><span class="pre">UserManagerfiltered.use_in_migrations</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usercustom.html#module-usercustom.models">usercustom.models module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser"><code class="docutils literal notranslate"><span class="pre">CustomUser</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.DoesNotExist"><code class="docutils literal notranslate"><span class="pre">CustomUser.DoesNotExist</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.MultipleObjectsReturned"><code class="docutils literal notranslate"><span class="pre">CustomUser.MultipleObjectsReturned</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.REQUIRED_FIELDS"><code class="docutils literal notranslate"><span class="pre">CustomUser.REQUIRED_FIELDS</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.USERNAME_FIELD"><code class="docutils literal notranslate"><span class="pre">CustomUser.USERNAME_FIELD</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.created_groups"><code class="docutils literal notranslate"><span class="pre">CustomUser.created_groups</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.date_joined"><code class="docutils literal notranslate"><span class="pre">CustomUser.date_joined</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.deleted_groups"><code class="docutils literal notranslate"><span class="pre">CustomUser.deleted_groups</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.email"><code class="docutils literal notranslate"><span class="pre">CustomUser.email</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.first_name"><code class="docutils literal notranslate"><span class="pre">CustomUser.first_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.get_next_by_date_joined"><code class="docutils literal notranslate"><span class="pre">CustomUser.get_next_by_date_joined()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.get_previous_by_date_joined"><code class="docutils literal notranslate"><span class="pre">CustomUser.get_previous_by_date_joined()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.group_members"><code class="docutils literal notranslate"><span class="pre">CustomUser.group_members</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.groups"><code class="docutils literal notranslate"><span class="pre">CustomUser.groups</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.id"><code class="docutils literal notranslate"><span class="pre">CustomUser.id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.is_activated"><code class="docutils literal notranslate"><span class="pre">CustomUser.is_activated</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.is_active"><code class="docutils literal notranslate"><span class="pre">CustomUser.is_active</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.is_staff"><code class="docutils literal notranslate"><span class="pre">CustomUser.is_staff</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.is_superuser"><code class="docutils literal notranslate"><span class="pre">CustomUser.is_superuser</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.last_login"><code class="docutils literal notranslate"><span class="pre">CustomUser.last_login</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.last_name"><code class="docutils literal notranslate"><span class="pre">CustomUser.last_name</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.logentry_set"><code class="docutils literal notranslate"><span class="pre">CustomUser.logentry_set</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.message_threads"><code class="docutils literal notranslate"><span class="pre">CustomUser.message_threads</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.messages"><code class="docutils literal notranslate"><span class="pre">CustomUser.messages</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.objects"><code class="docutils literal notranslate"><span class="pre">CustomUser.objects</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.objectsall"><code class="docutils literal notranslate"><span class="pre">CustomUser.objectsall</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.password"><code class="docutils literal notranslate"><span class="pre">CustomUser.password</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.profile_picture"><code class="docutils literal notranslate"><span class="pre">CustomUser.profile_picture</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.recieved_messages"><code class="docutils literal notranslate"><span class="pre">CustomUser.recieved_messages</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.updated_groups"><code class="docutils literal notranslate"><span class="pre">CustomUser.updated_groups</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.updated_message_threads"><code class="docutils literal notranslate"><span class="pre">CustomUser.updated_message_threads</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.user_permissions"><code class="docutils literal notranslate"><span class="pre">CustomUser.user_permissions</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="usercustom.html#usercustom.models.CustomUser.username"><code class="docutils literal notranslate"><span class="pre">CustomUser.username</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="usercustom.html#usercustom.models.get_image_name"><code class="docutils literal notranslate"><span class="pre">get_image_name()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="usercustom.html#module-usercustom">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Groups Backend Main Server</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2023, Sourabh, Ankit, Arshdeep, Sukhmeet, Sumit.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 6.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
+      
+      |
+      <a href="_sources/modules.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

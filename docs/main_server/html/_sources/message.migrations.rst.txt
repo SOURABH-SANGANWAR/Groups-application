@@ -1,0 +1,10 @@
+message.migrations package
+==========================
+
+Module contents
+---------------
+
+.. automodule:: message.migrations
+   :members:
+   :undoc-members:
+   :show-inheritance:

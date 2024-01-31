@@ -1,0 +1,10 @@
+thread.migrations package
+=========================
+
+Module contents
+---------------
+
+.. automodule:: thread.migrations
+   :members:
+   :undoc-members:
+   :show-inheritance:

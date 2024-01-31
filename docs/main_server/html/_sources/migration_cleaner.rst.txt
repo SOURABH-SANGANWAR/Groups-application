@@ -1,0 +1,7 @@
+migration\_cleaner module
+=========================
+
+.. automodule:: migration_cleaner
+   :members:
+   :undoc-members:
+   :show-inheritance:

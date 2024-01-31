@@ -1,0 +1,37 @@
+permissions package
+===================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   permissions.migrations
+
+Submodules
+----------
+
+permissions.apps module
+-----------------------
+
+.. automodule:: permissions.apps
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+permissions.models module
+-------------------------
+
+.. automodule:: permissions.models
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: permissions
+   :members:
+   :undoc-members:
+   :show-inheritance:

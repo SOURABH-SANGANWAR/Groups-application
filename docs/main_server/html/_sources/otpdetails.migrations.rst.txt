@@ -1,0 +1,29 @@
+otpdetails.migrations package
+=============================
+
+Submodules
+----------
+
+otpdetails.migrations.0001\_initial module
+------------------------------------------
+
+.. automodule:: otpdetails.migrations.0001_initial
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+otpdetails.migrations.0002\_otpdetails\_user module
+---------------------------------------------------
+
+.. automodule:: otpdetails.migrations.0002_otpdetails_user
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: otpdetails.migrations
+   :members:
+   :undoc-members:
+   :show-inheritance:

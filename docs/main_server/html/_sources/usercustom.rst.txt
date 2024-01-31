@@ -1,0 +1,85 @@
+usercustom package
+==================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   usercustom.migrations
+
+Submodules
+----------
+
+usercustom.admin module
+-----------------------
+
+.. automodule:: usercustom.admin
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+usercustom.apps module
+----------------------
+
+.. automodule:: usercustom.apps
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+usercustom.manager module
+-------------------------
+
+.. automodule:: usercustom.manager
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+usercustom.models module
+------------------------
+
+.. automodule:: usercustom.models
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+usercustom.serializers module
+-----------------------------
+
+.. automodule:: usercustom.serializers
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+usercustom.tests module
+-----------------------
+
+.. automodule:: usercustom.tests
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+usercustom.urls module
+----------------------
+
+.. automodule:: usercustom.urls
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+usercustom.views module
+-----------------------
+
+.. automodule:: usercustom.views
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: usercustom
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,29 @@
+message.migrations package
+==========================
+
+Submodules
+----------
+
+message.migrations.0001\_initial module
+---------------------------------------
+
+.. automodule:: message.migrations.0001_initial
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+message.migrations.0002\_auto\_20230504\_1433 module
+----------------------------------------------------
+
+.. automodule:: message.migrations.0002_auto_20230504_1433
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: message.migrations
+   :members:
+   :undoc-members:
+   :show-inheritance:

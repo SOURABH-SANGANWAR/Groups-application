@@ -1,0 +1,21 @@
+thread.migrations package
+=========================
+
+Submodules
+----------
+
+thread.migrations.0001\_initial module
+--------------------------------------
+
+.. automodule:: thread.migrations.0001_initial
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: thread.migrations
+   :members:
+   :undoc-members:
+   :show-inheritance:

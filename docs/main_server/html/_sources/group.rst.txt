@@ -1,0 +1,93 @@
+group package
+=============
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   group.migrations
+
+Submodules
+----------
+
+group.admin module
+------------------
+
+.. automodule:: group.admin
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+group.apps module
+-----------------
+
+.. automodule:: group.apps
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+group.models module
+-------------------
+
+.. automodule:: group.models
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+group.permissions module
+------------------------
+
+.. automodule:: group.permissions
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+group.serializers module
+------------------------
+
+.. automodule:: group.serializers
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+group.services module
+---------------------
+
+.. automodule:: group.services
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+group.tests module
+------------------
+
+.. automodule:: group.tests
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+group.urls module
+-----------------
+
+.. automodule:: group.urls
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+group.views module
+------------------
+
+.. automodule:: group.views
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: group
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+python manage.py migrate --fake group zero
+python manage.py migrate --fake member zero
+python manage.py migrate --fake permissions zero
+python manage.py migrate --fake otpdetails zero
+python manage.py migrate --fake usercustom zero
+python manage.py migrate --fake message zero
+python manage.py migrate --fake thread zero

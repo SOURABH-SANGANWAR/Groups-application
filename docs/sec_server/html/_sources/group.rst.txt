@@ -1,0 +1,37 @@
+group package
+=============
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   group.migrations
+
+Submodules
+----------
+
+group.apps module
+-----------------
+
+.. automodule:: group.apps
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+group.models module
+-------------------
+
+.. automodule:: group.models
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: group
+   :members:
+   :undoc-members:
+   :show-inheritance:

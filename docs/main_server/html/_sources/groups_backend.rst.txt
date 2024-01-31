@@ -1,0 +1,45 @@
+groups\_backend package
+=======================
+
+Submodules
+----------
+
+groups\_backend.asgi module
+---------------------------
+
+.. automodule:: groups_backend.asgi
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+groups\_backend.settings module
+-------------------------------
+
+.. automodule:: groups_backend.settings
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+groups\_backend.urls module
+---------------------------
+
+.. automodule:: groups_backend.urls
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+groups\_backend.wsgi module
+---------------------------
+
+.. automodule:: groups_backend.wsgi
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: groups_backend
+   :members:
+   :undoc-members:
+   :show-inheritance:
